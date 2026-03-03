@@ -108,7 +108,7 @@
         <div class="container-fluid">
             <div class="row min-vh-100">
                 <!-- Sidebar -->
-                <div class="col-md-3 sidebar">
+                <div class="col-md-3 col-lg-2 sidebar">
                     <h4 class="text-center fw-bold mb-4">MyDashboard</h4>
 
                     <a href="#">
@@ -118,7 +118,7 @@
                 </div>
 
                 <!-- Content -->
-                <div class="col-md-9 p-4">
+                <div class="col-md-9 col-lg-10 p-4">
                     <!-- Navbar -->
                     <nav class="navbar bg-white rounded-3 mb-4 p-3">
                         <div class="container-fluid">
