@@ -1,28 +1,9 @@
-📌 Employee Management System (CRUD Pegawai)
-Aplikasi berbasis Laravel untuk mengelola data pegawai dengan fitur CRUD lengkap, upload foto, relasi jabatan, serta API endpoint untuk integrasi data.
+Sebelum run website, jalankan seeder (php artisan db:seed)
+Untuk database ada dua tabel yaitu positions dan employees yang berelasi one to many
 
-🗄️ Struktur Database
-TABEL POSITIONS
-Column Type
-id bigint
-name string
-created_at timestamp
-updated_at timestamp
-
-TABEL EMPLOYEES
-Column Type
-id bigint
-employee_code string
-name string
-email string
-phone string
-gender enum(laki-laki / perempuan)
-birth_place string
-birth_date date
-hire_date date
-salary decimal
-status enum(active / inactive)
-photo string
-positions_id bigint
-created_at timestamp
-updated_at timestamp
+API :
+GET /api/employees -> AMBIL SEMUA DATA
+GET /api/employees/{id} -> AMBIL DATA PADA ID TERTENTU
+PUT /api/employees/{id} -> EDIT DATA PADA ID TERTENTU
+DELETE /api/employees/{id} -> HAPUS DATA PADA ID TERTENTU
+POST /api/employees -> KIRIM DATA
