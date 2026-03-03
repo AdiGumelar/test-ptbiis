@@ -311,7 +311,6 @@
                                         class="form-select selectpositions"
                                         id="positions_id"
                                     >
-                                        <option>Pilih Jabatan</option>
                                         <option value="1">
                                             Backend Developer
                                         </option>
