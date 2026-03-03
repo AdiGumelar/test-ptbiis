@@ -1,9 +1,11 @@
-Sebelum run website, jalankan seeder (php artisan db:seed)
-Untuk database ada dua tabel yaitu positions dan employees yang berelasi one to many
+`Sebelum run website, jalankan seeder (php artisan db:seed)`
 
-API :
-GET /api/employees -> AMBIL SEMUA DATA
-GET /api/employees/{id} -> AMBIL DATA PADA ID TERTENTU
-PUT /api/employees/{id} -> EDIT DATA PADA ID TERTENTU
-DELETE /api/employees/{id} -> HAPUS DATA PADA ID TERTENTU
-POST /api/employees -> KIRIM DATA
+`Untuk database ada dua tabel yaitu positions dan employees yang berelasi one to many`
+
+## API :
+
+`GET /api/employees -> AMBIL SEMUA DATA`
+`GET /api/employees/{id} -> AMBIL DATA PADA ID TERTENTU`
+`PUT /api/employees/{id} -> EDIT DATA PADA ID TERTENTU`
+`DELETE /api/employees/{id} -> HAPUS DATA PADA ID TERTENTU`
+`POST /api/employees -> KIRIM DATA`
