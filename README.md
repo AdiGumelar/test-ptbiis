@@ -1,8 +1,16 @@
+## SETUP PERTAMA KALI
+
+1. composer install
+2. cp .env.example .env
+3. php artisan key:generate
+4. php artisan migrate
+5. php artisan serve
+
 `Sebelum run website, jalankan seeder (php artisan db:seed)`
 
 `Untuk database ada dua tabel yaitu positions dan employees yang berelasi one to many`
 
-## API :
+## API
 
 `GET /api/employees -> AMBIL SEMUA DATA`
 
