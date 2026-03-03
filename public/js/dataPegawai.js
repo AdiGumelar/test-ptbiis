@@ -276,7 +276,7 @@ function detailPegawai(id) {
                 .text("Inactive");
         }
 
-        $("#d_id").text(dataPegawai.id);
+        $("#d_employeeCode").text(dataPegawai.employee_code);
         $("#d_email").text(dataPegawai.email);
         $("#d_phone").text(dataPegawai.phone);
         $("#d_gender").text(dataPegawai.gender);

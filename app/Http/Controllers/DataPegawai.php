@@ -129,6 +129,8 @@ class DataPegawai extends Controller
             'status'
         ]);
 
+        $oldEmployeeCode = $pegawai->employee_code;
+        $newEmployeeCode = $request->employee_code;
 
         if($request->hasFile('photo')){
             if ($pegawai->photo && Storage::disk('public')->exists($pegawai->photo)) {
@@ -142,6 +144,19 @@ class DataPegawai extends Controller
             $fileName = $employeeCode.'.'.$extension;
             $path = $file->storeAs('employees',$fileName,'public');
             $data['photo'] = $path;
+        }else {
+            if ($oldEmployeeCode !== $newEmployeeCode && $pegawai->photo) {
+
+                $oldPath = $pegawai->photo;
+                $extension = pathinfo($oldPath, PATHINFO_EXTENSION);
+                $newFileName = $newEmployeeCode . '.' . $extension;
+                $newPath = 'employees/' . $newFileName;
+
+                if (Storage::disk('public')->exists($oldPath)) {
+                    Storage::disk('public')->move($oldPath, $newPath);
+                    $data['photo'] = $newPath;
+                }
+            }
         }
         
         $pegawai->update($data);
