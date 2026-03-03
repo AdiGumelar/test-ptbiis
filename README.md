@@ -5,7 +5,11 @@
 ## API :
 
 `GET /api/employees -> AMBIL SEMUA DATA`
+
 `GET /api/employees/{id} -> AMBIL DATA PADA ID TERTENTU`
+
 `PUT /api/employees/{id} -> EDIT DATA PADA ID TERTENTU`
+
 `DELETE /api/employees/{id} -> HAPUS DATA PADA ID TERTENTU`
+
 `POST /api/employees -> KIRIM DATA`
