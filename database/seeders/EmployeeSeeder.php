@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Employees;
+use App\Models\Positions;
 
 class EmployeeSeeder extends Seeder
 {
@@ -13,7 +14,15 @@ class EmployeeSeeder extends Seeder
      */
     public function run(): void
     {
-        $positions = [1, 2, 3]; // sesuaikan dengan id posisi kamu
+        $positions_name = ['Backend Developer', 'Frontend Developer', 'Manager'];
+
+        foreach ($positions_name as $position) {
+            Positions::create([
+                'name' => $position
+            ]);
+        }
+
+        $positions = [1, 2, 3]; 
 
         for ($i = 1; $i <= 10; $i++) {
 
@@ -23,7 +32,7 @@ class EmployeeSeeder extends Seeder
                 'name' => fake()->name(),
                 'email' => 'pegawai' . $i . '@example.com',
                 'phone' => '08' . rand(1000000000, 9999999999),
-                'gender' => rand(0,1) ? 'male' : 'female',
+                'gender' => rand(0,1) ? 'laki-laki' : 'perempuan',
                 'birth_place' => fake()->city(),
                 'birth_date' => fake()->date('Y-m-d', '2005-01-01'),
                 'hire_date' => fake()->date('Y-m-d'),

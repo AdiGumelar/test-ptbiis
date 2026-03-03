@@ -24,17 +24,20 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         />
 
+        <!-- DateRangePicker -->
         <link
             rel="stylesheet"
             type="text/css"
             href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
         />
 
+        <!-- Select2 -->
         <link
             href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
             rel="stylesheet"
         />
 
+        <!-- Datatables -->
         <link
             rel="stylesheet"
             href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"
@@ -103,9 +106,9 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row min-vh-100">
                 <!-- Sidebar -->
-                <div class="col-md-2 sidebar">
+                <div class="col-md-3 sidebar">
                     <h4 class="text-center fw-bold mb-4">MyDashboard</h4>
 
                     <a href="#">
@@ -115,7 +118,7 @@
                 </div>
 
                 <!-- Content -->
-                <div class="col-md-10 p-4">
+                <div class="col-md-9 p-4">
                     <!-- Navbar -->
                     <nav class="navbar bg-white rounded-3 mb-4 p-3">
                         <div class="container-fluid">
@@ -244,8 +247,10 @@
                                         id="gender"
                                     >
                                         <option>Pilih</option>
-                                        <option value="male">Laki-laki</option>
-                                        <option value="female">
+                                        <option value="laki-laki">
+                                            Laki-laki
+                                        </option>
+                                        <option value="perempuan">
                                             Perempuan
                                         </option>
                                     </select>
@@ -586,10 +591,10 @@
                                         Jenis Kelamin
                                     </label>
                                     <select class="form-select" id="editGender">
-                                        <option value="male" selected>
+                                        <option value="laki-laki" selected>
                                             Laki-laki
                                         </option>
-                                        <option value="female">
+                                        <option value="perempuan">
                                             Perempuan
                                         </option>
                                     </select>
@@ -731,10 +736,14 @@
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
+        <!-- Select2 -->
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+        <!-- Datatables -->
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+        <!-- Sweetalert -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="{{ asset("js/dataPegawai.js") }}"></script>
     </body>

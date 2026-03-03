@@ -39,7 +39,7 @@ class DataPegawai extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:employees,email',
             'phone' => 'required',
-            'gender' => 'required|in:male,female',
+            'gender' => 'required|in:laki-laki,perempuan',
             'birth_place' => 'required|string',
             'birth_date' => 'required|date',
             'hire_date' => 'required|date',
@@ -106,7 +106,7 @@ class DataPegawai extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:employees,email,' . $id,
             'phone' => 'required',
-            'gender' => 'required|in:male,female',
+            'gender' => 'required|in:laki-laki,perempuan',
             'birth_place' => 'required|string',
             'birth_date' => 'required|date',
             'hire_date' => 'required|date',
@@ -131,7 +131,9 @@ class DataPegawai extends Controller
 
 
         if($request->hasFile('photo')){
-            Storage::disk('public')->delete($pegawai->photo);
+            if ($pegawai->photo && Storage::disk('public')->exists($pegawai->photo)) {
+                Storage::disk('public')->delete($pegawai->photo);
+            }
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
 
