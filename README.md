@@ -1,10 +1,11 @@
 ## SETUP PERTAMA KALI
 
 1. composer install
-2. cp .env.example .env
+2. copy .env.example .env
 3. php artisan key:generate
 4. php artisan migrate
-5. php artisan serve
+5. php artisan storage:link
+6. php artisan serve
 
 `Sebelum run website, jalankan seeder (php artisan db:seed)`
 
